@@ -1,0 +1,72 @@
+// Projects data for the portfolio
+export const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description: "A full-stack e-commerce application built with React, Node.js, and MongoDB. Features include user authentication, product catalog, shopping cart, and payment integration.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    githubUrl: "https://github.com/yourusername/ecommerce-platform",
+    liveUrl: "https://your-ecommerce-demo.netlify.app"
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+    technologies: ["React", "Firebase", "Material-UI", "React DnD"],
+    githubUrl: "https://github.com/yourusername/task-manager",
+    liveUrl: "https://your-task-manager.netlify.app"
+  },
+  {
+    id: 3,
+    title: "Weather Dashboard",
+    description: "A responsive weather dashboard that displays current weather conditions, forecasts, and interactive maps using multiple weather APIs.",
+    image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
+    technologies: ["JavaScript", "Chart.js", "OpenWeather API", "CSS3"],
+    githubUrl: "https://github.com/yourusername/weather-dashboard",
+    liveUrl: "https://your-weather-app.netlify.app"
+  },
+  {
+    id: 4,
+    title: "Social Media Analytics",
+    description: "A data visualization tool for social media analytics with interactive charts, real-time data processing, and comprehensive reporting features.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+    technologies: ["React", "D3.js", "Python", "PostgreSQL", "Redis"],
+    githubUrl: "https://github.com/yourusername/social-analytics",
+    liveUrl: "https://your-analytics-dashboard.netlify.app"
+  },
+  {
+    id: 5,
+    title: "Portfolio Website",
+    description: "A modern, responsive portfolio website built with React and Bootstrap, featuring smooth animations, dark mode, and mobile-first design.",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop",
+    technologies: ["React", "Bootstrap", "Framer Motion", "CSS3"],
+    githubUrl: "https://github.com/yourusername/portfolio-website",
+    liveUrl: "https://your-portfolio.netlify.app"
+  },
+  {
+    id: 6,
+    title: "Chat Application",
+    description: "A real-time chat application with multiple rooms, file sharing, emoji reactions, and user presence indicators.",
+    image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=250&fit=crop",
+    technologies: ["React", "Socket.io", "Node.js", "Express", "MongoDB"],
+    githubUrl: "https://github.com/yourusername/chat-app",
+    liveUrl: "https://your-chat-app.netlify.app"
+  }
+];
+
+export const skills = [
+  { name: "React", icon: "⚛️", level: 90 },
+  { name: "JavaScript", icon: "🟨", level: 85 },
+  { name: "Node.js", icon: "🟢", level: 80 },
+  { name: "Python", icon: "🐍", level: 75 },
+  { name: "HTML5", icon: "🌐", level: 95 },
+  { name: "CSS3", icon: "🎨", level: 90 },
+  { name: "Bootstrap", icon: "📱", level: 85 },
+  { name: "MongoDB", icon: "🍃", level: 70 },
+  { name: "PostgreSQL", icon: "🐘", level: 65 },
+  { name: "Git", icon: "📝", level: 80 },
+  { name: "AWS", icon: "☁️", level: 60 },
+  { name: "Docker", icon: "🐳", level: 55 }
+];
