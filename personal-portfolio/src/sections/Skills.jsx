@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import SkillBadge from '../components/SkillBadge';
 import { skills } from '../data/projects';
@@ -29,7 +28,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills-section">
-      <Container>
+      <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -43,28 +42,28 @@ const Skills = () => {
             </p>
           </motion.div>
           
-          <Row className="justify-content-center">
+          <div className="row justify-content-center">
             {skills.map((skill, index) => (
-              <Col lg={3} md={4} sm={6} xs={6} key={index} className="mb-4">
+              <div className="col-lg-3 col-md-4 col-sm-6 col-6 mb-4" key={index}>
                 <SkillBadge skill={skill} index={index} />
-              </Col>
+              </div>
             ))}
-          </Row>
+          </div>
           
           <motion.div 
             variants={titleVariants}
             className="skills-summary mt-5"
           >
-            <Row className="align-items-center">
-              <Col md={6}>
+            <div className="row align-items-center">
+              <div className="col-md-6">
                 <h3 className="skills-summary-title">Continuous Learning</h3>
                 <p className="skills-summary-text">
                   I believe in staying up-to-date with the latest technologies and 
                   best practices. I'm always exploring new frameworks, tools, and 
                   methodologies to improve my skills and deliver better solutions.
                 </p>
-              </Col>
-              <Col md={6}>
+              </div>
+              <div className="col-md-6">
                 <div className="learning-stats">
                   <div className="learning-stat">
                     <div className="stat-icon">📚</div>
@@ -81,11 +80,11 @@ const Skills = () => {
                     </div>
                   </div>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 };

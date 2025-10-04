@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
@@ -29,7 +28,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-section">
-      <Container>
+      <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -43,13 +42,13 @@ const Projects = () => {
             </p>
           </motion.div>
           
-          <Row>
+          <div className="row">
             {projects.map((project, index) => (
-              <Col lg={4} md={6} key={project.id} className="mb-4">
+              <div className="col-lg-4 col-md-6 mb-4" key={project.id}>
                 <ProjectCard project={project} index={index} />
-              </Col>
+              </div>
             ))}
-          </Row>
+          </div>
           
           <motion.div 
             variants={titleVariants}
@@ -68,7 +67,7 @@ const Projects = () => {
             </motion.a>
           </motion.div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 };

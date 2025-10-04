@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -80,7 +79,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <Container>
+      <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -94,10 +93,10 @@ const Contact = () => {
             </p>
           </motion.div>
           
-          <Row>
-            <Col lg={8} className="mx-auto">
-              <Row>
-                <Col md={6}>
+          <div className="row">
+            <div className="col-lg-8 mx-auto">
+              <div className="row">
+                <div className="col-md-6">
                   <motion.div variants={itemVariants}>
                     <div className="contact-info">
                       <h3 className="contact-info-title">Let's Connect</h3>
@@ -131,60 +130,65 @@ const Contact = () => {
                       </div>
                     </div>
                   </motion.div>
-                </Col>
+                </div>
                 
-                <Col md={6}>
+                <div className="col-md-6">
                   <motion.div variants={itemVariants}>
-                    <Form onSubmit={handleSubmit} className="contact-form">
+                    <form onSubmit={handleSubmit} className="contact-form">
                       {showSuccess && (
-                        <Alert variant="success" className="mb-4">
-                          <Alert.Heading>Message Sent!</Alert.Heading>
+                        <div className="alert alert-success mb-4" role="alert">
+                          <h4 className="alert-heading">Message Sent!</h4>
                           Thank you for reaching out. I'll get back to you soon!
-                        </Alert>
+                        </div>
                       )}
                       
-                      <Form.Group className="mb-3">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control
+                      <div className="mb-3">
+                        <label htmlFor="name" className="form-label">Name</label>
+                        <input
                           type="text"
+                          className="form-control"
+                          id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Your Name"
                           required
                         />
-                      </Form.Group>
+                      </div>
                       
-                      <Form.Group className="mb-3">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control
+                      <div className="mb-3">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <input
                           type="email"
+                          className="form-control"
+                          id="email"
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="your.email@example.com"
                           required
                         />
-                      </Form.Group>
+                      </div>
                       
-                      <Form.Group className="mb-4">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control
-                          as="textarea"
-                          rows={4}
+                      <div className="mb-4">
+                        <label htmlFor="message" className="form-label">Message</label>
+                        <textarea
+                          className="form-control"
+                          id="message"
                           name="message"
+                          rows="4"
                           value={formData.message}
                           onChange={handleChange}
                           placeholder="Tell me about your project..."
                           required
-                        />
-                      </Form.Group>
+                        ></textarea>
+                      </div>
                       
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <Button 
+                        <button 
                           type="submit" 
                           className="btn btn-primary btn-custom w-100"
                           disabled={isSubmitting}
@@ -200,16 +204,16 @@ const Contact = () => {
                               Send Message
                             </>
                           )}
-                        </Button>
+                        </button>
                       </motion.div>
-                    </Form>
+                    </form>
                   </motion.div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -34,15 +33,15 @@ const About = () => {
 
   return (
     <section id="about" className="about-section">
-      <Container>
+      <div className="container">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <Row className="align-items-center">
-            <Col lg={6}>
+          <div className="row align-items-center">
+            <div className="col-lg-6">
               <motion.div variants={itemVariants}>
                 <div className="about-image-container">
                   <img 
@@ -53,9 +52,9 @@ const About = () => {
                   <div className="about-image-overlay"></div>
                 </div>
               </motion.div>
-            </Col>
+            </div>
             
-            <Col lg={6}>
+            <div className="col-lg-6">
               <motion.div variants={itemVariants} className="about-content">
                 <h2 className="section-title">About Me</h2>
                 <p className="about-text">
@@ -91,16 +90,16 @@ const About = () => {
                   </div>
                 </div>
               </motion.div>
-            </Col>
-          </Row>
+            </div>
+          </div>
           
           <motion.div 
             variants={itemVariants}
             className="stats-section"
           >
-            <Row className="text-center">
+            <div className="row text-center">
               {stats.map((stat, index) => (
-                <Col md={3} sm={6} key={index}>
+                <div className="col-md-3 col-sm-6" key={index}>
                   <motion.div 
                     className="stat-item"
                     whileHover={{ scale: 1.05 }}
@@ -109,12 +108,12 @@ const About = () => {
                     <div className="stat-number">{stat.number}</div>
                     <div className="stat-label">{stat.label}</div>
                   </motion.div>
-                </Col>
+                </div>
               ))}
-            </Row>
+            </div>
           </motion.div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 };

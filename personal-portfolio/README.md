@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with React, Bootstrap, and Framer Motion. Features a clean design, smooth animations, dark/light mode toggle, and mobile-first responsive layout.
+A modern, responsive personal portfolio website built with React, Bootstrap CSS classes, and Framer Motion. Features a clean design, smooth animations, dark/light mode toggle, and mobile-first responsive layout using standard HTML elements with Bootstrap classes.
 
 ## 🚀 Features
 
@@ -168,8 +168,7 @@ Update the following files with your personal information:
 
 - **React 18** - Frontend framework
 - **Vite** - Build tool and dev server
-- **Bootstrap 5** - CSS framework
-- **React Bootstrap** - Bootstrap components for React
+- **Bootstrap 5** - CSS framework (using CSS classes directly)
 - **Framer Motion** - Animation library
 - **CSS3** - Custom styling with CSS variables
 

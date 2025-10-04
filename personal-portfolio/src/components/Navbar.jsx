@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
@@ -35,37 +34,39 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   ];
 
   return (
-    <BootstrapNavbar
-      expand="lg"
-      fixed="top"
-      className={`navbar-custom ${scrolled ? 'navbar-scrolled' : ''} ${darkMode ? 'navbar-dark' : 'navbar-light'}`}
-    >
-      <Container>
+    <nav className={`navbar navbar-expand-lg fixed-top navbar-custom ${scrolled ? 'navbar-scrolled' : ''} ${darkMode ? 'navbar-dark' : 'navbar-light'}`}>
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <BootstrapNavbar.Brand 
+          <a 
             href="#home" 
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
             }}
-            className="brand-text"
+            className="navbar-brand brand-text"
           >
             Portfolio
-          </BootstrapNavbar.Brand>
+          </a>
         </motion.div>
 
-        <BootstrapNavbar.Toggle 
+        <button 
+          className="navbar-toggler navbar-toggler-custom" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#basic-navbar-nav"
           aria-controls="basic-navbar-nav" 
+          aria-expanded={expanded}
           onClick={() => setExpanded(!expanded)}
-          className="navbar-toggler-custom"
-        />
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        <BootstrapNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        <div className={`collapse navbar-collapse ${expanded ? 'show' : ''}`} id="basic-navbar-nav">
+          <ul className="navbar-nav ms-auto">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.id}
@@ -73,16 +74,18 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Nav.Link
-                  href={`#${item.id}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.id);
-                  }}
-                  className="nav-link-custom"
-                >
-                  {item.label}
-                </Nav.Link>
+                <li className="nav-item">
+                  <a
+                    href={`#${item.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.id);
+                    }}
+                    className="nav-link nav-link-custom"
+                  >
+                    {item.label}
+                  </a>
+                </li>
               </motion.div>
             ))}
             
@@ -100,10 +103,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                 {darkMode ? '☀️' : '🌙'}
               </button>
             </motion.div>
-          </Nav>
-        </BootstrapNavbar.Collapse>
-      </Container>
-    </BootstrapNavbar>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const ProjectCard = ({ project, index }) => {
@@ -43,13 +42,12 @@ const ProjectCard = ({ project, index }) => {
       whileHover="hover"
       viewport={{ once: true, margin: "-50px" }}
     >
-      <Card className="project-card h-100">
+      <div className="card project-card h-100">
         <div className="project-image-container">
-          <Card.Img 
-            variant="top" 
+          <img 
             src={project.image || '/api/placeholder/400/250'} 
             alt={project.title}
-            className="project-image"
+            className="card-img-top project-image"
           />
           <div className="project-overlay">
             <div className="project-tech">
@@ -62,14 +60,14 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </div>
         
-        <Card.Body className="d-flex flex-column">
-          <Card.Title className="project-title">
+        <div className="card-body d-flex flex-column">
+          <h5 className="card-title project-title">
             {project.title}
-          </Card.Title>
+          </h5>
           
-          <Card.Text className="project-description flex-grow-1">
+          <p className="card-text project-description flex-grow-1">
             {project.description}
-          </Card.Text>
+          </p>
           
           <div className="project-buttons mt-auto">
             {project.githubUrl && (
@@ -102,8 +100,8 @@ const ProjectCard = ({ project, index }) => {
               </motion.a>
             )}
           </div>
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
     </motion.div>
   );
 };

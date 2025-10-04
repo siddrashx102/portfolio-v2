@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -14,9 +13,9 @@ const Footer = () => {
 
   return (
     <footer className="footer-custom">
-      <Container>
-        <Row className="align-items-center">
-          <Col md={6}>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -27,9 +26,9 @@ const Footer = () => {
                 © {currentYear} Your Name. All rights reserved.
               </p>
             </motion.div>
-          </Col>
+          </div>
           
-          <Col md={6}>
+          <div className="col-md-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -58,9 +57,9 @@ const Footer = () => {
                 ))}
               </div>
             </motion.div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

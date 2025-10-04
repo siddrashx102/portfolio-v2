@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -19,9 +18,9 @@ const Home = () => {
 
   return (
     <section id="home" className="home-section">
-      <Container>
-        <Row className="align-items-center min-vh-100">
-          <Col lg={6}>
+      <div className="container">
+        <div className="row align-items-center min-vh-100">
+          <div className="col-lg-6">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -82,9 +81,9 @@ const Home = () => {
                 </motion.div>
               </div>
             </motion.div>
-          </Col>
+          </div>
           
-          <Col lg={6}>
+          <div className="col-lg-6">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -148,9 +147,9 @@ const Home = () => {
                 🚀
               </motion.div>
             </motion.div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
